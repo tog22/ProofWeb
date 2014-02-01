@@ -1,0 +1,241 @@
+/* Cross-site */
+a.glossary {
+	color: #383D44;
+	font-size: 0.6em;
+	vertical-align: super;
+	border-bottom: none;
+}
+
+.pre-label {
+	font-weight: bold;
+}
+
+.message {
+	font-weight: bold;
+}
+
+.error {
+	color: black;
+	font-size: 0.714em; /* 10/14 */
+	padding: 6px;
+	background-color: #B04A3B;
+	border: 1px solid #441D17;
+}
+
+/* Single-style classes */
+
+.clear {
+	clear: both;
+}
+
+.center, .centre {
+	text-align: center;
+}
+
+
+/* FP */
+#featured-argument .proposition .text {
+	
+}
+
+.navlabel {
+	font-weight: bold;
+}
+
+#app-explanation {
+	background-color: #E6E3D7;
+	padding: 1em 2em;
+}
+
+/* Arg page */
+#arg-source, #arg-info {
+	margin: 1em 0;
+}
+
+#arg-info {
+	font-style: italic;
+	margin-left: 68px; /* 2em + 40px */
+}
+
+
+/* Adding forms */
+form.add label {
+	width: 200px;
+	display: inline-block;
+}
+
+form.add input[type="text"] {
+	width: 600px;
+}
+
+form.add input.number {
+	width: 2em;
+}
+
+#newComment #comment {
+	width: 600px;
+	height: 6em;
+	margin-top: 5px;
+}
+/* Propositions */
+.proposition .therefore {
+	width: 1em;
+	display:-moz-inline-stack;
+	display:inline-block;
+}
+
+.proposition .number {
+	margin-left: 2px;
+	margin-right: 4px;
+	width: 1em;
+}
+
+.proposition .from {
+	margin-left: 2px;
+}
+
+.button {
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+	display:-moz-inline-stack;
+	display:inline-block;
+}
+
+.id-info {
+	font-size: 0.8em;
+	color: gray;
+}
+
+.button a {
+	width: 16px;
+	height: 16px;
+	display: block;
+	border-bottom: none;
+}
+
+.button a:hover {
+	background:transparent;
+}
+
+.tick-on {
+	background: url(images/tick-off.png) no-repeat center center;
+}
+
+.tick-on a {
+	background: url(images/tick-on.png) no-repeat center center;
+}
+
+.tick-c {
+	background: url(images/tick-on.png) no-repeat center center;
+}
+
+.tick-c a {
+	background: url(images/tick-c.png) no-repeat center center;
+}
+
+.tick-off {
+	background: url(images/tick-on.png) no-repeat center center;
+}
+
+.tick-off a {
+	background: url(images/tick-off.png) no-repeat center center;
+}
+
+.cross-on {
+	background: url(images/cross-off.png) no-repeat center center;
+}
+
+.cross-on a {
+	background: url(images/cross-on.png) no-repeat center center;
+}
+
+.cross-off {
+	background: url(images/cross-on.png) no-repeat center center;
+}
+
+.cross-off a {
+	background: url(images/cross-off.png) no-repeat center center;
+}
+
+.cross-c {
+	background: url(images/cross-on.png) no-repeat center center;
+}
+
+.cross-c a {
+	background: url(images/cross-c.png) no-repeat center center;
+}
+
+/* HTML styles */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%; /* Fixes exaggerated text resizing in IE6 and IE7 */
+}
+
+#page {
+	/* Use a 12px base font size with a 16px line height 
+	font-size: 0.75em; /* 16px x .75 = 12px  
+	line-height: 1.333em; /* 12px x 1.333 = 16px */
+
+	/* Use a 14px base font size with a 18px line height */
+	font-size: 0.875em; /* 16px x .875 = 14px */
+	line-height: 1.286em; /* 14px x 1.286 = 18px */
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif
+}
+
+h1 {
+	font-size: 1.5em;
+    line-height: 1.2em;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.2em;
+    line-height: 1.2em;
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 1px dotted blue;
+}
+
+/* Theme */
+#header {
+background-color: #31363E;
+border-top: 1px solid #464A52;
+height: 128px;
+}
+
+#header h1 {
+	color: white;
+	margin-top: 32px;
+	font-size: 4em;
+	line-height: 1em;
+	font-family: 'Krona One', cursive;
+}
+
+body {
+color:#383D44;
+background-color: #F3F1E9;
+}
+
+#main {
+	width: 65em;
+	margin: 2em auto;
+}
+
+#col1 {
+	width: 35em;
+	float: left;
+}
+
+#col2 {
+	width: 25em;
+	padding-left: 2.5em;
+	float: right;
+	border-left: 1px solid #ccc;
+}
+

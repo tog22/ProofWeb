@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Add argument</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link type="text/css" rel="stylesheet" media="all" href="../styles.css" />
+	<script type="text/javascript" src="libraries/core.js"></script>
+	<script type="text/javascript" src="libraries/ajax.js"></script>
+	<script type="text/javascript" src="libraries/toglibrary.js"></script>
+	<script type="text/javascript" src="libraries/formdata2querystring.js"></script>
+	<script type="text/javascript">
+		var ActiveForm = {
+			init: function() {
+				var form = document.getElementById('newArgument');
+				Core.addEventListener(form, "submit", ActiveForm.submitListener);
+			},
+			submitListener: function(event) {
+				Core.preventDefault(event);
+				var ajax = new Ajax();
+				var request = '../../model/ajax/addargument.php?'+formData2QueryString(this);
+			//	request.replace('"', 'SHOULDBEQUOTE');
+				ajax.doGet(request,ActiveForm.handler,'xml');
+			},
+			handler: function(response) {
+				tog.showMessages(response);
+			}
+
+		};
+		
+		Core.start(ActiveForm);
+	</script>
+</head>
+<body>
+	<div id="main">
+		<h1>Add argument</h1>
+		
+		<form id="newArgument" class="add" action="http://localhost/proveit/model/ajax/addargument.php" method="get">
+		  <div>
+		    <label for="name">Name:</label>
+		    <input type="text" name="name" id="name"/>
+		  </div>
+		  <div>
+		    <label for="i1">Implication 1:</label>
+		    <input type="text" class="number" name="i1" id="i1"/>
+		  </div>
+		  <div>
+		    <label for="i2">Implication 2:</label>
+		    <input type="text" class="number" name="i2" id="i2"/>
+		  </div>
+		  <div>
+		    <label for="i3">Implication 3:</label>
+		    <input type="text" class="number" name="i3" id="i3"/>
+		  </div>
+		  <div>
+		    <label for="i4">Implication 4:</label>
+		    <input type="text" class="number" name="i4" id="i4"/>
+		  </div>
+		  <div>
+		    <label for="i5">Implication 5:</label>
+		    <input type="text" class="number" name="i5" id="i5"/>
+		  </div>
+		  <div>
+		    <label for="i6">Implication 6:</label>
+		    <input type="text" class="number" name="i6" id="i6"/>
+		  </div>
+		  <div>
+		    <label for="i7">Implication 7:</label>
+		    <input type="text" class="number" name="i7" id="i7"/>
+		  </div>
+		  <div>
+		    <label for="i8">Implication 8:</label>
+		    <input type="text" class="number" name="i8" id="i8"/>
+		  </div>
+		  <div>
+		    <label for="i9">Implication 9:</label>
+		    <input type="text" class="number" name="i9" id="i9"/>
+		  </div>
+		  <div>
+		    <label for="i10">Implication 10:</label>
+		    <input type="text" class="number" name="i10" id="i10"/>
+		  </div>
+		  <div>
+		    <label for="description">Descripion:</label>
+		    <input type="text" name="description" id="description"/>
+		  </div>
+		  <div>
+		    <label for="source">Source:</label>
+		    <input type="text" name="source" id="source"/>
+		  </div>
+		  <div>
+		    <label for="source_author">Source author:</label>
+		    <input type="text" name="source_author" id="source_author"/>
+		  </div>
+		  <div>
+		    <input type="submit" name="submit" id="submit" 
+		        value="Add"/> 
+		  </div>
+		</form>
+	</div>
+</body>
+</html>

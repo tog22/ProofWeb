@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Add implication</title>
+	<script type="text/javascript" src="libraries/core.js"></script>
+	<script type="text/javascript" src="libraries/ajax.js"></script>
+	<script type="text/javascript" src="libraries/toglibrary.js"></script>
+	<script type="text/javascript" src="libraries/formdata2querystring.js"></script>
+	<script type="text/javascript">
+		var ActiveForm = {
+			init: function() {
+				var form = document.getElementById('newimplication');
+				Core.addEventListener(form, "submit", ActiveForm.submitListener);
+			},
+			submitListener: function(event) {
+				Core.preventDefault(event);
+				var ajax = new Ajax();
+				ajax.doGet('http://localhost/proveit/model/ajax/addimplication.php?'+formData2QueryString(this), 
+				ActiveForm.handler,'xml');
+			},
+			handler: function(response) {
+				tog.showMessages(response);
+			}
+
+		};
+		
+		Core.start(ActiveForm);
+	</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link type="text/css" rel="stylesheet" media="all" href="../styles.css" />
+</head>
+<body>
+	<div id="main">
+	<h1>Add implication</h1>
+		<form id="newimplication" action="/view/php/addimplicationSHOULDNTSHOW.php" onsubmit="addimplication(); return false;" method="get">
+		  <div>
+		    <label for="p1">Premise 1:</label>
+		    <input type="text" name="p1" id="p1" onchange="onchangetest();"/>
+		  </div>
+		  <div>
+		    <label for="p2">Premise 2:</label>
+		    <input type="text" name="p2" id="p2"/>
+		  </div>
+		  <div>
+		    <label for="p3">Premise 3:</label>
+		    <input type="text" name="p3" id="p3"/>
+		  </div>
+		  <div>
+		    <label for="p4">Premise 4:</label>
+		    <input type="text" name="p4" id="p4"/>
+		  </div>
+		  <div>
+		    <label for="c">Conclusion:</label>
+		    <input type="text" name="c" id="c"/>
+		  </div>
+		  <div>
+		    <input type="submit" name="submit" id="submit" value="Add" onclick="addimplication(); return false;" /> 
+		  </div>
+		</form>
+	</div>
+</body>
+</html>

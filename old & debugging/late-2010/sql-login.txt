@@ -1,0 +1,4 @@
+<?php
+$usern = "sant0317_prop";
+$passw = "khwurouxnik1";
+?>

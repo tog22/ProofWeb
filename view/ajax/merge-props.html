@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Merge propositions</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link type="text/css" rel="stylesheet" media="all" href="../styles.css" />
+	<script type="text/javascript" src="libraries/core.js"></script>
+	<script type="text/javascript" src="libraries/ajax.js"></script>
+	<script type="text/javascript" src="libraries/toglibrary.js"></script>
+	<script type="text/javascript" src="libraries/formdata2querystring.js"></script>
+	<script type="text/javascript">
+		var ActiveForm = {
+			init: function() {
+				var form = document.getElementById('mergePropositions');
+				Core.addEventListener(form, "submit", ActiveForm.submitListener);
+			},
+			submitListener: function(event) {
+				Core.preventDefault(event);
+				var ajax = new Ajax();
+				ajax.doGet('../../model/ajax/mergepropositions.php?'+formData2QueryString(this), ActiveForm.handler,'xml');
+			},
+			handler: function(response) {
+				tog.showMessages(response);
+			}
+		}; 
+		
+		Core.start(ActiveForm);
+	</script>
+</head>
+<body>
+	<div id="main">
+		<h1>Merge propositions</h1>
+		
+		<form id="mergePropositions" class="add">
+		  <div>
+		    <label for="proposition">Merge:</label>
+		    <input type="text" name="merge" id="merge"/>
+		  </div>
+		  <div>
+		    <label for="negation">Into:</label>
+		    <input type="text" name="into" id="into"/>
+		  </div>
+		  <div>
+		    <input type="submit" name="submit" id="submit" 
+		        value="Merge"/> 
+		  </div>
+		</form>
+	</div>
+</body>
+</html>

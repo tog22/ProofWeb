@@ -1,0 +1,80 @@
+<body>
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>ProveIt</title>
+	<script type="text/javascript" src="libraries/core.js"></script>
+	<script type="text/javascript" src="libraries/ajax.js"></script>
+	<script type="text/javascript" src="libraries/toglibrary.js"></script>
+
+	<script type="text/javascript" src="libraries/formdata2querystring.js"></script>
+	<script type="text/javascript">
+		var ActiveLinks = {
+			init: function() {
+				var buttons = Core.getElementsByClass('button');
+				for (i = 0; i < buttons.length; i++) {
+					Core.addEventListener(buttons[i].firstChild, 'click', ActiveLinks.submitListener);
+				}
+			},
+			submitListener: function(event) {
+				Core.preventDefault(event);
+				var ajax = new Ajax();
+										switch (this.title) {
+							case 'Accept':
+								var toSet = 1;
+								break;
+							case 'Reject':
+								var toSet = 2;
+								break;
+							case 'Take this back':
+								var toSet = 3;
+								break;
+						}
+						if (this.classList[1] == 'committed') {
+							var c = 1;
+						} else {
+							var c = 0;
+						}
+						ajax.doGet('http://localhost/proveit/model/ajax/setattitude.php?p='+this.classList[0]+'&b='+toSet+'&c='+c, ActiveLinks.handler,'xml');
+									},
+			handler: function(response) {
+				tog.showMessages(response);
+				// Run through attitudeChange elements to match against props below and if nec. update buttons
+				var attitudeChanges = response.getElementsByTagName('attitudeChange');
+				for (i = 0; i < attitudeChanges.length; i++) {
+					var test = attitudeChanges[i].children[0].wholeText;
+				}
+				var mainDiv = document.getElementById('main');
+				if (message) {
+					tog.addElement('div','message',message.firstChild.wholeText,mainDiv);
+				}
+			}
+		}; 
+		
+		Core.start(ActiveLinks);
+	</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link type="text/css" rel="stylesheet" media="all" href="../styles.css" />
+</head>
+<body>
+<!-- get html for arg by calling view.php & insert here - can we grap the paramaeters of this page using JavaScript rather than PHP? (is there any reason to bother besides as a learning exercise, given that seeing a new argument can acceptably require a page refresh? I've got PHP parsing power to burn -->
+	<div id="main">
+
+			<h1>The 'All Xs/An X' syllogism </h1>
+	
+			<div id="arg-source">
+			<span class="inline-label">Source:</span>
+			Aristotle, Ancient and Mediaeval Logic		</div>
+	
+	
+	<div class="proposition"><span class="buttons"><span class="tick-off button"><a title="Accept" class="1" href="set-attitude.php?p=1&amp;a=1"></a></span> <span class="cross-off button"><a title="Reject" class="1" href="set-attitude.php?p=1&amp;a=2"></a></span> </span><span class="therefore">&emsp;&ensp;</span><span class="number">1</span><span class="text">Socrates is a man</span></div>
+
+<div class="proposition"><span class="buttons"><span class="tick-off button"><a title="Accept" class="3" href="set-attitude.php?p=3&amp;a=1"></a></span> <span class="cross-off button"><a title="Reject" class="3" href="set-attitude.php?p=3&amp;a=2"></a></span> </span><span class="therefore">&emsp;&ensp;</span><span class="number">2</span><span class="text">All men are mortal</span></div>
+
+<div class="proposition"><span class="buttons"><span class="tick-off button"><a title="Accept" class="5" href="set-attitude.php?p=5&amp;a=1"></a></span> <span class="cross-off button"><a title="Reject" class="5" href="set-attitude.php?p=5&amp;a=2"></a></span> </span><span class="therefore">&there4;</span><span class="number">3</span><span class="text">Socrates is mortal</span><span class="from">(from 1 and 2)</span></div>
+
+	</div>
+</body>
+
+</html>

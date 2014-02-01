@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Add proposition</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link type="text/css" rel="stylesheet" media="all" href="styles.css" />
+
+</head>
+<body>
+</body>
+</html>
+<h1>Add proposition</h1>
+
+<form action="../../model/php/addproposition.php" method="post" class="add">
+  <div>
+    <label for="proposition">Proposition:</label>
+    <input type="text" name="proposition" id="proposition"/>
+  </div>
+  <div>
+    <label for="negation">Negation (optional):</label>
+    <input type="text" name="negation" id="negation"/>
+  </div
+  <div>
+    <label for="contextp">Context proposition (optional):</label>
+    <input type="text" name="contextp" id="contextp"/>
+  </div>
+  <div>
+    <label for="contextpt">Context pre-text (optional):</label>
+    <input type="text" name="contextpt" id="contextpt"/>
+  </div>
+  <div>
+    <label for="definitional">Definitional?</label>
+    <input type="checkbox" name="definitional" id="definitional"/>
+  </div>
+  <div>
+    <label for="logical">Logical truth?</label>
+    <input type="checkbox" name="logical" id="logical"/>
+  </div>
+  <div>
+    <input type="submit" name="submit" id="submit" 
+        value="Add"/> 
+  </div>
+</form>

@@ -1,0 +1,19 @@
+== The argument for egalitarianism from the undeserved nature of unequal status =
+*May* be made at John Rawls, A Theory of Justice (Cambridge, Mass.: Harvard University Press, 
+1971), 102. 
+
+
+1
+If someone enjoys wealth due to having properties that they do not deserve, then they do not deserve that wealth. 
+2
+All wealth that people enjoy is due to properties that they do not deserve (such as being born clever, or diligent, or to wealthy parents.)
+^3
+All wealth is undeserved.
+4
+Unless someone deserves a greater-than-average share of wealth, they should not have it.
+^5
+No one should have a greater-than-average share of wealth.
+---
+Bridge outside argument:
+6-LOG
+If no one should have a greater-than-average share of wealth, then equal welfare is intrinsically valuable 
