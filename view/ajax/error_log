@@ -1,0 +1,2 @@
+[13-Nov-2014 02:50:00] PHP Warning:  mysql_fetch_row(): supplied argument is not a valid MySQL result resource in /home1/sant0317/public_html/proofweb/functions/functions.php on line 278
+[13-Nov-2014 02:50:02] PHP Warning:  mysql_fetch_row(): supplied argument is not a valid MySQL result resource in /home1/sant0317/public_html/proofweb/functions/functions.php on line 278
