@@ -3,7 +3,7 @@
 <head>
 	<title>
 		<?php
-		require '../../model/functions.php';
+		require '../../functions/functions.php';
 		$type = mysql_real_escape_string($_GET['type']);
 		$id = mysql_real_escape_string($_GET['id']);
 		if (is_numeric($id)) {

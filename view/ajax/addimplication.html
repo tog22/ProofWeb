@@ -18,7 +18,7 @@
 			submitListener: function(event) {
 				Core.preventDefault(event);
 				var ajax = new Ajax();
-				var request = '../../model/ajax/addimplication.php?'+formData2QueryString(this);
+				var request = '../../functions/ajax/addimplication.php?'+formData2QueryString(this);
 				ajax.doGet(request, ActiveForm.handler,'xml');
 			},
 			handler: function(response) {
@@ -33,7 +33,7 @@
 <body>
 	<div id="main">
 	<h1>Add implication</h1>
-		<form id="newimplication" action="../../model/ajax/addimplication.php" method="get">
+		<form id="newimplication" action="../../functions/ajax/addimplication.php" method="get">
 		  <div>
 		    <label for="p1">Premise 1:</label>
 		    <input type="text" name="p1" id="p1"/>

@@ -15,7 +15,7 @@
 			submitListener: function(event) {
 				Core.preventDefault(event);
 				var ajax = new Ajax();
-				ajax.doGet('http://localhost/proveit/model/ajax/addargument.php?'+formData2QueryString(this), 
+				ajax.doGet('http://localhost/proveit/functions/ajax/addargument.php?'+formData2QueryString(this), 
 				ActiveForm.handler,'xml');
 			},
 			handler: function(response) {
@@ -34,7 +34,7 @@
 	<div id="main">
 		<h1>Add argument</h1>
 		
-		<form id="newArgument" class="add" action="http://localhost/proveit/model/ajax/addargument.php" method="get">
+		<form id="newArgument" class="add" action="http://localhost/proveit/functions/ajax/addargument.php" method="get">
 		  <div>
 		    <label for="name">Name:</label>
 		    <input type="text" name="name" id="name"/>

@@ -15,7 +15,7 @@
 			submitListener: function(event) {
 				Core.preventDefault(event);
 				var ajax = new Ajax();
-				ajax.doGet('http://localhost/proveit/model/ajax/addproposition.php?'+formData2QueryString(this), ActiveForm.handler,'xml');
+				ajax.doGet('http://localhost/proveit/functions/ajax/addproposition.php?'+formData2QueryString(this), ActiveForm.handler,'xml');
 			},
 			handler: function(response) {
 				tog.showMessages(response);

@@ -18,7 +18,7 @@
 			submitListener: function(event) {
 				Core.preventDefault(event);
 				var ajax = new Ajax();
-				ajax.doGet('../../model/ajax/mergepropositions.php?'+formData2QueryString(this), ActiveForm.handler,'xml');
+				ajax.doGet('../../functions/ajax/mergepropositions.php?'+formData2QueryString(this), ActiveForm.handler,'xml');
 			},
 			handler: function(response) {
 				tog.showMessages(response);

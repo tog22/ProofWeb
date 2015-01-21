@@ -18,7 +18,7 @@
 			submitListener: function(event) {
 				Core.preventDefault(event);
 				var ajax = new Ajax();
-				ajax.doGet('../../model/ajax/addcomment.php?'+formData2QueryString(this), ActiveForm.handler,'xml');
+				ajax.doGet('../../functions/ajax/addcomment.php?'+formData2QueryString(this), ActiveForm.handler,'xml');
 			},
 			handler: function(response) {
 				tog.showMessages(response);
@@ -32,7 +32,7 @@
 	<div id="main">
 		<h1>Add comment</h1>
 		
-		<form id="newComment" class="add" action="../../model/ajax/addcomment.php" method="get">
+		<form id="newComment" class="add" action="../../functions/ajax/addcomment.php" method="get">
 		  <div>
 		    <label for="proposition">Proposition:</label>
 		    <input type="text" name="proposition" id="proposition"/>

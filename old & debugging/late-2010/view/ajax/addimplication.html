@@ -15,7 +15,7 @@
 			submitListener: function(event) {
 				Core.preventDefault(event);
 				var ajax = new Ajax();
-				ajax.doGet('http://localhost/proveit/model/ajax/addimplication.php?'+formData2QueryString(this), 
+				ajax.doGet('http://localhost/proveit/functions/ajax/addimplication.php?'+formData2QueryString(this), 
 				ActiveForm.handler,'xml');
 			},
 			handler: function(response) {

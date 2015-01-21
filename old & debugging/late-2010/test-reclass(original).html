@@ -35,7 +35,7 @@
 						} else {
 							var c = 0;
 						}
-						ajax.doGet('http://localhost/proveit/model/ajax/setattitude.php?p='+this.classList[0]+'&b='+toSet+'&c='+c, ActiveLinks.handler,'xml');
+						ajax.doGet('http://localhost/proveit/functions/ajax/setattitude.php?p='+this.classList[0]+'&b='+toSet+'&c='+c, ActiveLinks.handler,'xml');
 									},
 			handler: function(response) {
 				tog.showMessages(response);

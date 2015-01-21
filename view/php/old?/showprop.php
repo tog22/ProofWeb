@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-	require 'model/functions.php';
+	require 'functions/functions.php';
 ?>
 <div id="page">
 <?php

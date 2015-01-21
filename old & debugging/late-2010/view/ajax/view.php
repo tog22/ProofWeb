@@ -46,7 +46,7 @@
 						} else {
 							var c = 0;
 						}
-						ajax.doGet('http://localhost/proveit/model/ajax/setattitude.php?p='+this.classList[0]+'&b='+toSet+'&c='+c, ActiveLinks.handler,'xml');
+						ajax.doGet('http://localhost/proveit/functions/ajax/setattitude.php?p='+this.classList[0]+'&b='+toSet+'&c='+c, ActiveLinks.handler,'xml');
 						<?php break;
 				}
 				if ($id == 'all') {
@@ -83,7 +83,7 @@
 <!-- get html for arg by calling view.php & insert here - can we grap the paramaeters of this page using JavaScript rather than PHP? (is there any reason to bother besides as a learning exercise, given that seeing a new argument can acceptably require a page refresh? I've got PHP parsing power to burn -->
 	<div id="main">
 		<?php
-		require '../../model/functions.php';
+		require '../../functions/functions.php';
 		if ($view[WHAT] == 'argument') {
 			if ($view[WHICH] != 'all') {
 				show_argument($id, TRUE);

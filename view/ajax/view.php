@@ -3,7 +3,7 @@
 <head>
 	<title>
 		<?php
-		require '../../model/functions.php';
+		require '../../functions/functions.php';
 		$type = mysql_real_escape_string($_GET['type']);
 		$id = mysql_real_escape_string($_GET['id']);
 		$view = array();
@@ -96,11 +96,11 @@
 							if (this.parentNode.className == 'tick-on button') {
 								this.parentNode.className = 'tick-off button';
 								this.title = 'Accept';
-								this.href = '/props/model/php/set-attitude.php?p=' + this.className + '&amp;a=1';
+								this.href = '/props/functions/php/set-attitude.php?p=' + this.className + '&amp;a=1';
 							} else if (this.parentNode.className == 'cross-on button') {
 								this.parentNode.className = 'cross-off button';
 								this.title = 'Reject';
-								this.href = '/props/model/php/set-attitude.php?p=' + this.className + '&amp;a=2';
+								this.href = '/props/functions/php/set-attitude.php?p=' + this.className + '&amp;a=2';
 							}
 							
 							break;
@@ -113,7 +113,7 @@
 				} else {
 					var c = 'NULL';
 				}
-				var request = '../../model/ajax/setattitude.php?p='+this.classList[0]+'&b='+toSet+'&c='+c;
+				var request = '../../functions/ajax/setattitude.php?p='+this.classList[0]+'&b='+toSet+'&c='+c;
 				ajax.doGet(request, ActiveLinks.handler,'xml');
 			},
 			
@@ -134,7 +134,7 @@
 									propsShown[j][2].className = 'cross-on button';
 								}
 								propsShown[j][2].title = 'Take this back';
-								propsShown[j][2].firstChild.href = '/props/model/php/set-attitude.php?p=' + propsShown[j][0] + '&amp;a=NULL';
+								propsShown[j][2].firstChild.href = '/props/functions/php/set-attitude.php?p=' + propsShown[j][0] + '&amp;a=NULL';
 							} else if (belief == 2) {
 								if (propsShown[j][2].classList[0] == 'tick-on') {
 									propsShown[j][2].className = 'tick-off button';
@@ -143,7 +143,7 @@
 									propsShown[j][2].className = 'cross-off button';
 									propsShown[j][2].title = 'Reject';
 								}
-								propsShown[j][2].firstChild.href = '/props/model/php/set-attitude.php?p=' + propsShown[j][0] + '&amp;a=1';
+								propsShown[j][2].firstChild.href = '/props/functions/php/set-attitude.php?p=' + propsShown[j][0] + '&amp;a=1';
 							} else if (c == 1) {
 								if (propsShown[j][0]%2) {
 									propsShown[j][2].className = 'cross-c button';
@@ -167,7 +167,7 @@
 	</script>
 	<?php } ?>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="shortcut icon" href="/props/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link type="text/css" rel="stylesheet" media="all" href="../styles.css" />
 </head>
 <body>

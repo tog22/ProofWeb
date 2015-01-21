@@ -19,7 +19,7 @@
 			},
 			submitListener: function(event) {
 				Core.preventDefault(event);
-				var request = '../../model/ajax/addproposition.php?'+formData2QueryString(this);
+				var request = '../../functions/ajax/addproposition.php?'+formData2QueryString(this);
 				var ajax = new Ajax();
 				ajax.doGet(request, ActiveForm.handler,'xml');
 			},

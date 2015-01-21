@@ -12,7 +12,7 @@
 	<script type="text/javascript">
 	</script>
 	<?php
-		require '../../model/functions.php';
+		require '../../functions/functions.php';
 	?>
 </head>
 <body>

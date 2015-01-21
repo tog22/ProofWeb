@@ -10,7 +10,7 @@
 </body>
 </html>
 <?php
-	require '../../model/functions.php';
+	require '../../functions/functions.php';
 ?>
 <h1>Add argument</h1>
 

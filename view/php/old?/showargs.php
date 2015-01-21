@@ -11,7 +11,7 @@
 </body>
 </html>
 <?php
-	require 'model/functions.php';
+	require 'functions/functions.php';
 ?>
 <?php
 for ($p = 1; $p <= 30; $p++) {
